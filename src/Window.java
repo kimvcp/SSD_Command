@@ -109,6 +109,16 @@ public class Window extends JFrame implements Observer {
             add(startButton);
             replayButton = new JButton("Replay");
             replayButton.setEnabled(false);
+            replayButton.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					 world.start();
+	                    startButton.setEnabled(false);
+	                    Window.this.requestFocus();
+					
+				}
+			});
             add(replayButton);
             gameOverLabel = new JLabel("GAME OVER");
             gameOverLabel.setForeground(Color.red);
