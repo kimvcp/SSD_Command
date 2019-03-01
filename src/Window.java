@@ -110,13 +110,11 @@ public class Window extends JFrame implements Observer {
             replayButton = new JButton("Replay");
             replayButton.setEnabled(false);
             replayButton.addActionListener(new ActionListener() {
-				
+
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					 world.start();
-	                    startButton.setEnabled(false);
-	                    Window.this.requestFocus();
-					
+					world.setReplay();
+					world.start();
 				}
 			});
             add(replayButton);

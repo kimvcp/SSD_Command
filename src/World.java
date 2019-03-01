@@ -31,7 +31,7 @@ public class World extends Observable {
 		}
 	}
 
-	private void setReplay() {
+	public void setReplay() {
 		this.replayMode = true;
 	}
 
